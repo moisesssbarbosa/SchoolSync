@@ -9,5 +9,11 @@ public class Boletim {
 
     public void mostrarMedia() {
         System.out.println("Média do aluno: " + (nota1 + nota2) / 2);
+            
+        if (((nota1 + nota2) / 2) > 6) {
+            System.out.println("APROVADO.");
+        } else {
+            System.out.println("reprovado.");
+        }
     }
 }
