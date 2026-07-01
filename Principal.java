@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
 public class Principal {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
         Estudante e1 = new Estudante("Moises", "1", true);
         Boletim b1 = new Boletim( 10.00, 10.00);
@@ -17,15 +14,28 @@ public class Principal {
         Frequencia f3 = new Frequencia(0);
 
         System.out.println("\nAluno: " + e1.nome);
-        b1.mostrarMedia();
-        f1.mostrarFaltas();
+        if (e1.mensalidadeDia) {
+            b1.mostrarMedia();
+            f1.mostrarFaltas();
+        } else {
+            System.out.println("Aviso: Dados retidos por pendência financeira.");
+        }        
 
         System.out.println("\nAluno: " + e2.nome);
-        b2.mostrarMedia();
-        f2.mostrarFaltas();
+        if (e2.mensalidadeDia) {
+            b2.mostrarMedia();
+            f2.mostrarFaltas();
+        } else {
+            System.out.println("Aviso: Dados retidos por pendência financeira.");
+        }
 
         System.out.println("\nAluno: " + e3.nome);
-        b3.mostrarMedia();
-        f3.mostrarFaltas();
+        if (e3.mensalidadeDia) {
+            b3.mostrarMedia();
+            f3.mostrarFaltas();
+        } else {
+            System.out.println("Aviso: Dados retidos por pendência financeira.");
+        }
+        
     }
 }
